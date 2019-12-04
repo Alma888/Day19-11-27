@@ -1,0 +1,35 @@
+# Day19-11-27
+
+1、方法重载的概念
+       ==》 方法名称相同，形参列表不同
+                方法重载跟返回值类型和修饰符无关，Java的重载 是发生在本类中
+                的，重载的条件是在本类中有多个方法名相同，但参数列表不同
+               （可能是，参数个数不同，参数类型不同），跟返回值无关。
+       ==》 方法的签名是：  方法名称+形参列表
+
+2、在Java中，File类提供定位本地文件系统，对文件或目录及其属性进行基本   
+     操作。
+     
+3、关于volatile关键字的说法：
+不能保证线程安全（它只能保证代码的可见性和部分代码的重排序，
+                                              而不能保证代码的原子性）
+volatile关键字用在多线程同步中，可保证读取的可见性
+JVM保证从主内存加载到线程工作内存的值是最新的
+volatile能禁止进行指令重排序
+
+4、（未学）下列程序的运行结果是（IOException!）
+public void getCustomerInfo() {
+try {
+// do something that may cause an Exception
+} catch (java.io.FileNotFoundException ex) {
+System.out.print("FileNotFoundException!");
+} catch (java.io.IOException ex) {
+System.out.print("IOException!");
+} catch (java.lang.Exception ex) {
+System.out.print("Exception!");
+}
+}
+
+
+5、下列哪种异常是检查型异常，需要在编写程序时声明？
+    ==》  FileNotFoundException
